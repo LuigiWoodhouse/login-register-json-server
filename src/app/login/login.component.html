@@ -1,0 +1,39 @@
+<!--LOGIN SECTION-->
+<section class="view intro-2">
+  <header class="intro-header">
+    <br><br><br><br>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+      </div>
+      <div class="form-container sign-in-container">
+        <form [formGroup]="loginFormControl">
+          <h1>Log in</h1>
+          <input matInput type="text" placeholder="Enter Username" formControlName="userName" required>
+          <input matInput type="passWord" placeholder="Enter Password" formControlName="passWord" required>
+          <a href="#">
+            <h6>Forgot your password?</h6>
+          </a>
+          <button (click)="login()">Log In</button>
+        </form>
+      </div>
+      <!--REGISTRATION SECTION-->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <!-- <h1></h1> -->
+            <br><br><br><br>
+            <h4 style="color:rgb(241, 237, 237);">Attractive Login Page, Dashboards,<br> Online Shopping Window For Your
+              Online Business!
+              <br>
+              Contact &nbsp; <br>
+              WhatsApp: 8765772312
+              Email: codeitfrun@gmail.com
+            </h4>
+            <br>
+            <button class="ghost" (click)="goToRegisterPage()" id="signUp">Register Your Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</section>

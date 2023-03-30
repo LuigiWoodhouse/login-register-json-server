@@ -1,0 +1,96 @@
+<header class="intro-header">
+    <form [formGroup]="registerFormControl">
+        <br><br><br>
+        <div class="form-container">
+            <h1 align="center">Register</h1>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- PERSONAL INFORMATION-->
+                        <div class="row field-data">
+
+                            <h1 align="center">Personal Information</h1>
+                            <div class="col-md form-group">
+                                <h6> First Name </h6>
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" placeholder="Tavita" formControlName="firstName">
+
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md form-group">
+                                <h6> Last Name </h6>
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" type="text" placeholder="Woodhouse"
+                                        formControlName="lastName">
+
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- ACCOUNT INFORMATION-->
+                    <div class="col-lg-6">
+                        <div class="row field-data">
+                            <h1 align="center">Account Information</h1>
+                            <div class="col-md form-group">
+                                <h6> Username </h6>
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" type="text" placeholder="You will use this to login"
+                                        formControlName="userName" required>
+
+                                </mat-form-field>
+                            </div>
+
+
+
+                            <div class="col-md form-group">
+                                <h6> Password </h6>
+                                <mat-form-field appearance="fill">
+                                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="******"
+                                        formControlName="passWord" required>
+                                    <button mat-icon-button matSuffix (click)="hide = !hide">
+                                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </button>
+
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!--BUTTON TO REGISTER ACCOUNT AND SUBMIT TO DATABASE-->
+            <button type="button" class="registerbutton" mat-raised-button color="primary"
+                (click)="openRegister(registerConfirmation)" [disabled]="!registerFormControl.valid">Register</button>
+        </div>
+    </form>
+</header>
+
+
+
+
+
+
+
+<!-- CONFIRMATION PAGE TO REGISTER ACCOUNT-->
+<ng-template #registerConfirmation>
+    <div class="modal-body">
+        Are you sure?
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary mr-2" (click)="modalRef.hide()">
+            No | Go Back
+        </button>
+        <button type="button" class="btn btn-outline-success ml-3" (click)="register()" (click)="modalRef.hide()">
+            Yes | SUBMIT
+        </button>
+    </div>
+</ng-template>
