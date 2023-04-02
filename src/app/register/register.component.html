@@ -12,7 +12,7 @@
                             <h1 align="center">Personal Information</h1>
                             <div class="col-md form-group">
                                 <h6> First Name </h6>
-                                <mat-form-field appearance="fill">
+                                <mat-form-field appearance="outline">
                                     <input matInput type="text" placeholder="Tavita" formControlName="firstName">
 
                                 </mat-form-field>
@@ -20,7 +20,7 @@
 
                             <div class="col-md form-group">
                                 <h6> Last Name </h6>
-                                <mat-form-field appearance="fill">
+                                <mat-form-field appearance="outline">
                                     <input matInput type="text" type="text" placeholder="Woodhouse"
                                         formControlName="lastName">
 
@@ -39,7 +39,7 @@
                             <h1 align="center">Account Information</h1>
                             <div class="col-md form-group">
                                 <h6> Username </h6>
-                                <mat-form-field appearance="fill">
+                                <mat-form-field appearance="outline">
                                     <input matInput type="text" type="text" placeholder="You will use this to login"
                                         formControlName="userName" required>
 
@@ -50,8 +50,8 @@
 
                             <div class="col-md form-group">
                                 <h6> Password </h6>
-                                <mat-form-field appearance="fill">
-                                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="******"
+                                <mat-form-field appearance="outline">
+                                    <input matInput type="password" placeholder="******"
                                         formControlName="passWord" required>
                                     <button mat-icon-button matSuffix (click)="hide = !hide">
                                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -67,8 +67,10 @@
                 </div>
             </div>
             <!--BUTTON TO REGISTER ACCOUNT AND SUBMIT TO DATABASE-->
-            <button type="button" class="registerbutton" mat-raised-button color="primary"
-                (click)="openRegister(registerConfirmation)" [disabled]="!registerFormControl.valid">Register</button>
+            <button type="button" mat-raised-button color="primary" (click)="openRegister(registerConfirmation)"
+                [disabled]="!registerFormControl.valid">Register</button>
+
+            <button type="button" mat-raised-button color="primary" (click)="goToLoginPage()">Go To Login</button>
         </div>
     </form>
 </header>

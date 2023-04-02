@@ -9,7 +9,7 @@
         <form [formGroup]="loginFormControl">
           <h1>Log in</h1>
           <input matInput type="text" placeholder="Enter Username" formControlName="userName" required>
-          <input matInput type="passWord" placeholder="Enter Password" formControlName="passWord" required>
+          <input matInput type="password" placeholder="Enter Password" formControlName="passWord" required>
           <a href="#">
             <h6>Forgot your password?</h6>
           </a>
@@ -22,15 +22,29 @@
           <div class="overlay-panel overlay-right">
             <!-- <h1></h1> -->
             <br><br><br><br>
-            <h4 style="color:rgb(241, 237, 237);">Attractive Login Page, Dashboards,<br> Online Shopping Window For Your
-              Online Business!
-              <br>
-              Contact &nbsp; <br>
-              WhatsApp: 8765772312
-              Email: codeitfrun@gmail.com
+            <h4 style="color:rgb(90, 9, 9);">
+
+              <div style="color:white; list-style: none;">Linkedin: <a href="https://luigiwoodhouse.com" target="_blank"
+                  class="highlight">
+                  &nbsp;https://luigiwoodhouse.com &nbsp;
+                </a>
+              </div>
+
+              <div style="color:white; list-style: none;">Linkedin: <a
+                  href="https://www.linkedin.com/in/luigi-woodhouse-0012bb152" target="_blank" class="highlight">
+                  &nbsp;https://www.linkedin.com/in/luigi-woodhouse-0012bb152 &nbsp;
+                </a>
+              </div>
+
+              <div style="color:white; list-style: none;">Linkedin: <a href="https://github.com/LuigiWoodhouse"
+                  target="_blank" class="highlight">
+                  &nbsp;https://github.com/LuigiWoodhouse &nbsp;
+                </a>
+              </div>
             </h4>
             <br>
             <button class="ghost" (click)="goToRegisterPage()" id="signUp">Register Your Account</button>
+            <button type="button" mat-raised-button color="primary" (click)="goToRegisterPage()">Register</button>
           </div>
         </div>
       </div>

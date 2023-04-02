@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "firstName": "Tavita",
+      "lastName": "Woodhouse",
+      "userName": "Test123",
+      "passWord": "123456",
+      "id": 1
+    },
+    {
+      "firstName": "Soph",
+      "lastName": "Green",
+      "userName": "Sophia",
+      "passWord": "Bebesitos",
+      "id": 2
+    },
+    {
+      "firstName": "Luigi",
+      "lastName": "Woodhouse",
+      "userName": "test",
+      "passWord": "123456",
+      "id": 3
+    }
+  ]
+}
